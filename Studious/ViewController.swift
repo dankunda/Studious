@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let ref = Database.database().reference()
+        ref.childByAutoId().setValue(["name" : "GDtheKID", "Role" : "C.E.O."])
+        ref.childByAutoId().setValue(["name" : "Jared", "Role" : "Jester"])
     }
 
 
