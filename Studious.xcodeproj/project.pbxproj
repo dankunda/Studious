@@ -17,6 +17,9 @@
 		A9B71B6023F0BA290072848E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9B71B5E23F0BA290072848E /* LaunchScreen.storyboard */; };
 		A9B71B6B23F0BA2A0072848E /* StudiousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B71B6A23F0BA2A0072848E /* StudiousTests.swift */; };
 		A9B71B7623F0BA2A0072848E /* StudiousUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B71B7523F0BA2A0072848E /* StudiousUITests.swift */; };
+		A9B71B8423F50E4A0072848E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B71B8323F50E4A0072848E /* SignUpViewController.swift */; };
+		A9B71B8623F50E5B0072848E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B71B8523F50E5B0072848E /* LoginViewController.swift */; };
+		A9B71B8823F50E810072848E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B71B8723F50E810072848E /* HomeViewController.swift */; };
 		B8BC8F38ACD92FD48AD6D955 /* Pods_StudiousTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B21373BE2D9D984693FFEE42 /* Pods_StudiousTests.framework */; };
 		F61808DB23F4C2C800A8E7ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F61808DA23F4C2C800A8E7ED /* GoogleService-Info.plist */; };
 		F61808DC23F4C2C800A8E7ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F61808DA23F4C2C800A8E7ED /* GoogleService-Info.plist */; };
@@ -63,6 +66,9 @@
 		A9B71B7123F0BA2A0072848E /* StudiousUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudiousUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B71B7523F0BA2A0072848E /* StudiousUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudiousUITests.swift; sourceTree = "<group>"; };
 		A9B71B7723F0BA2A0072848E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9B71B8323F50E4A0072848E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A9B71B8523F50E5B0072848E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A9B71B8723F50E810072848E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B21373BE2D9D984693FFEE42 /* Pods_StudiousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudiousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F61808DA23F4C2C800A8E7ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -145,7 +151,7 @@
 			children = (
 				A9B71B5323F0BA250072848E /* AppDelegate.swift */,
 				A9B71B5523F0BA250072848E /* SceneDelegate.swift */,
-				A9B71B5723F0BA250072848E /* ViewController.swift */,
+				A9B71B8923F50E930072848E /* View Controllers */,
 				A9B71B5923F0BA250072848E /* Main.storyboard */,
 				A9B71B5C23F0BA290072848E /* Assets.xcassets */,
 				A9B71B5E23F0BA290072848E /* LaunchScreen.storyboard */,
@@ -171,6 +177,17 @@
 				A9B71B7723F0BA2A0072848E /* Info.plist */,
 			);
 			path = StudiousUITests;
+			sourceTree = "<group>";
+		};
+		A9B71B8923F50E930072848E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A9B71B5723F0BA250072848E /* ViewController.swift */,
+				A9B71B8323F50E4A0072848E /* SignUpViewController.swift */,
+				A9B71B8523F50E5B0072848E /* LoginViewController.swift */,
+				A9B71B8723F50E810072848E /* HomeViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,7 +427,10 @@
 			files = (
 				A9B71B5823F0BA250072848E /* ViewController.swift in Sources */,
 				A9B71B5423F0BA250072848E /* AppDelegate.swift in Sources */,
+				A9B71B8423F50E4A0072848E /* SignUpViewController.swift in Sources */,
+				A9B71B8623F50E5B0072848E /* LoginViewController.swift in Sources */,
 				A9B71B5623F0BA250072848E /* SceneDelegate.swift in Sources */,
+				A9B71B8823F50E810072848E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
