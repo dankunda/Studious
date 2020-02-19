@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class SignUpViewController: UIViewController {
 
@@ -34,7 +36,8 @@ class SignUpViewController: UIViewController {
     }
     
     func setUpElements() {
-        //        Hide the error label
+        
+        // Hide the error label
         errorLabel.alpha = 0
         
     }
@@ -73,8 +76,28 @@ class SignUpViewController: UIViewController {
         }
         else {
             
-            // create the user
+            // create cleaned versions of the user input data, free of whitespaces and new lines
+            let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
+            // create the user
+            Auth.auth().createUser(withEmail: "", password: "") { (result, err) in
+                
+                // check for errors
+                if err != nil {
+                    // there was an error creating the user
+                    self.showError("Error creating user")
+                }
+                else {
+                    // user was created successfully, store first name and last name
+                    let db = Firestore.firestore()
+                    
+                    
+                    
+                }
+            }
             
         }
         

@@ -396,22 +396,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Studious/Pods-Studious-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Studious/Pods-Studious-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Studious/Pods-Studious-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

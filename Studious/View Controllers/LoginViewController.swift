@@ -67,7 +67,7 @@ class LoginViewController: UIViewController {
         }
         else {
             
-            // create the user
+            // something is done
             
         }
         
