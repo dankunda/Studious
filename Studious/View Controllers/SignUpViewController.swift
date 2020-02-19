@@ -20,13 +20,36 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var signUpButton: UIButton!
     
+    @IBOutlet weak var errorLabel: UILabel!
+    
+    @IBOutlet weak var goBackButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setUpElements()
+        
     }
     
+    func setUpElements() {
+        //        Hide the error label
+        errorLabel.alpha = 0
+        
+    }
+    
+    // Check fields are filled in and accurate;
+    // if everything is correct, return nil. Otherwise return error message.
+    func validateFields() -> String? {
+        
+        if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            
+            return "You must fill in all the required fields."
+        }
+        
+        return nil
+    }
 
     /*
     // MARK: - Navigation
@@ -40,7 +63,28 @@ class SignUpViewController: UIViewController {
 
     
     @IBAction func signUpTapped(_ sender: Any) {
+        
+        let error = validateFields()
+        
+        if error != nil {
+            
+            // if there's something wrong with fields, show error message
+            showError(error!)
+        }
+        else {
+            
+            // create the user
+            
+            
+        }
+        
     }
     
     
+    
+    func showError(_ message:String) {
+        
+        errorLabel.text = message
+        errorLabel.alpha = 1
+    }
 }
