@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -182,10 +182,10 @@
 		A9B71B8923F50E930072848E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A9B71B5723F0BA250072848E /* ViewController.swift */,
 				A9B71B8323F50E4A0072848E /* SignUpViewController.swift */,
 				A9B71B8523F50E5B0072848E /* LoginViewController.swift */,
 				A9B71B8723F50E810072848E /* HomeViewController.swift */,
+				A9B71B5723F0BA250072848E /* ViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

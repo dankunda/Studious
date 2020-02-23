@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -67,8 +68,23 @@ class LoginViewController: UIViewController {
         }
         else {
             
-            // something is done
+            // clean user input data in text fields
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
+            // sign in user
+            Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
+                
+                if err != nil {
+                    // couldn't sign in
+                    self.showError("Error signing in, double check your credentials")
+                }
+                else {
+                    // transition to home screen/view
+                    self.transitionToHome()
+                    
+                }
+            }
         }
         
     }
@@ -81,5 +97,13 @@ class LoginViewController: UIViewController {
         errorLabel.alpha = 1
     }
     
+    func transitionToHome() {
+        
+        let homeViewController = storyboard?.instantiateViewController(identifier: "HomeVC") as? HomeViewController
+        
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
+        
+    }
     
 }
