@@ -10,6 +10,13 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var majorLabel: UILabel!
+    
+    @IBOutlet weak var classesLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
