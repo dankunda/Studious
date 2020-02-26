@@ -18,6 +18,8 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var majorTextField: UITextField!
     
+    @IBOutlet weak var classesTextField: UITextField!
+    
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
