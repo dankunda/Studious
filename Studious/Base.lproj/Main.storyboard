@@ -296,39 +296,6 @@ that ensures academic success."</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6SC-OR-Wh4">
-                                <rect key="frame" x="20" y="124" width="374" height="537"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="537" id="Nnb-KM-aCX"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U6P-o3-XEt">
-                                <rect key="frame" x="121" y="721.5" width="172.5" height="120.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBC-7Z-Fwx">
-                                        <rect key="frame" x="0.0" y="0.0" width="172.5" height="33.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eg8-Xx-mZ1">
-                                        <rect key="frame" x="0.0" y="43.5" width="172.5" height="33.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strongest Classes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdV-XI-H4I">
-                                        <rect key="frame" x="0.0" y="87" width="172.5" height="33.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="SdV-XI-H4I" firstAttribute="height" secondItem="dBC-7Z-Fwx" secondAttribute="height" id="N5o-SE-ekC"/>
-                                    <constraint firstItem="eg8-Xx-mZ1" firstAttribute="height" secondItem="dBC-7Z-Fwx" secondAttribute="height" id="Syu-RG-Lam"/>
-                                </constraints>
-                            </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-open-book-96-2" translatesAutoresizingMaskIntoConstraints="NO" id="oog-aM-UBC">
                                 <rect key="frame" x="182" y="54" width="50" height="50"/>
                                 <constraints>
@@ -336,14 +303,62 @@ that ensures academic success."</string>
                                     <constraint firstAttribute="width" constant="50" id="qz0-63-c1a"/>
                                 </constraints>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6SC-OR-Wh4">
+                                <rect key="frame" x="20" y="124" width="374" height="537"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="537" id="Nnb-KM-aCX"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U6P-o3-XEt">
+                                <rect key="frame" x="35" y="716.5" width="300" height="120.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBC-7Z-Fwx">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eg8-Xx-mZ1">
+                                        <rect key="frame" x="0.0" y="43.5" width="300" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strongest Classes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdV-XI-H4I">
+                                        <rect key="frame" x="0.0" y="87" width="300" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SdV-XI-H4I" firstAttribute="height" secondItem="dBC-7Z-Fwx" secondAttribute="height" id="N5o-SE-ekC"/>
+                                    <constraint firstItem="eg8-Xx-mZ1" firstAttribute="height" secondItem="dBC-7Z-Fwx" secondAttribute="height" id="Syu-RG-Lam"/>
+                                    <constraint firstAttribute="width" constant="300" id="WRW-dR-E2b"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaS-FS-QVH">
+                                <rect key="frame" x="351" y="61.5" width="35" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="8rs-N1-yze"/>
+                                    <constraint firstAttribute="width" constant="35" id="96d-Om-xgl"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="person.crop.circle" catalog="system"/>
+                                <connections>
+                                    <segue destination="XKR-q4-Wei" kind="show" id="Goo-pk-T2D"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.55260027026420888" green="0.79381097545603618" blue="0.91646177029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="U6P-o3-XEt" firstAttribute="centerX" secondItem="Hym-5l-Qnp" secondAttribute="centerX" id="EMW-FG-e7q"/>
+                            <constraint firstItem="PaS-FS-QVH" firstAttribute="top" secondItem="8t4-h3-pJr" secondAttribute="top" constant="17" id="0eY-6p-cP0"/>
+                            <constraint firstItem="U6P-o3-XEt" firstAttribute="leading" secondItem="8t4-h3-pJr" secondAttribute="leading" constant="35" id="4aF-Qu-Gvg"/>
                             <constraint firstItem="oog-aM-UBC" firstAttribute="centerX" secondItem="Hym-5l-Qnp" secondAttribute="centerX" id="FXc-H8-lWR"/>
-                            <constraint firstItem="8t4-h3-pJr" firstAttribute="bottom" secondItem="U6P-o3-XEt" secondAttribute="bottom" constant="20" id="Mqh-Gv-2XU"/>
+                            <constraint firstItem="8t4-h3-pJr" firstAttribute="bottom" secondItem="U6P-o3-XEt" secondAttribute="bottom" constant="25" id="Mqh-Gv-2XU"/>
                             <constraint firstItem="6SC-OR-Wh4" firstAttribute="leading" secondItem="Hym-5l-Qnp" secondAttribute="leadingMargin" id="UVU-AJ-oWG"/>
                             <constraint firstItem="6SC-OR-Wh4" firstAttribute="top" secondItem="oog-aM-UBC" secondAttribute="bottom" constant="20" id="g9b-94-dww"/>
+                            <constraint firstItem="8t4-h3-pJr" firstAttribute="trailing" secondItem="PaS-FS-QVH" secondAttribute="trailing" constant="28" id="iHZ-lC-nZU"/>
                             <constraint firstItem="6SC-OR-Wh4" firstAttribute="centerX" secondItem="Hym-5l-Qnp" secondAttribute="centerX" id="lc0-9t-KCk"/>
                             <constraint firstItem="oog-aM-UBC" firstAttribute="top" secondItem="8t4-h3-pJr" secondAttribute="top" constant="10" id="skU-YT-OUJ"/>
                         </constraints>
@@ -351,13 +366,43 @@ that ensures academic success."</string>
                     </view>
                     <connections>
                         <outlet property="classesLabel" destination="SdV-XI-H4I" id="iNe-4j-bxJ"/>
+                        <outlet property="imageView" destination="6SC-OR-Wh4" id="LBy-Ii-OuH"/>
                         <outlet property="majorLabel" destination="eg8-Xx-mZ1" id="h8F-pt-NI6"/>
                         <outlet property="nameLabel" destination="dBC-7Z-Fwx" id="iba-oJ-fqe"/>
+                        <outlet property="profileButton" destination="PaS-FS-QVH" id="wUW-RR-i5y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5g-3l-zdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2805.7971014492755" y="126.5625"/>
+        </scene>
+        <!--Self Profile View Controller-->
+        <scene sceneID="hkj-ox-m7m">
+            <objects>
+                <viewController id="XKR-q4-Wei" customClass="SelfProfileViewController" customModule="Studious" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Sb-SQ-YV5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSe-qt-BDq">
+                                <rect key="frame" x="30" y="45" width="117.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.55976554339999995" green="0.8012284838" blue="0.91646177029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="FSe-qt-BDq" firstAttribute="top" secondItem="AnV-bE-EnJ" secondAttribute="top" constant="45" id="1qL-SC-2zX"/>
+                            <constraint firstItem="FSe-qt-BDq" firstAttribute="leading" secondItem="AnV-bE-EnJ" secondAttribute="leading" constant="30" id="GFI-kW-4zw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AnV-bE-EnJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cvo-GN-fxo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZP-rj-5mJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3538" y="-27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3FB-P8-p8w">
@@ -379,6 +424,7 @@ that ensures academic success."</string>
     </scenes>
     <resources>
         <image name="icons8-open-book-96-2" width="96" height="96"/>
+        <image name="person.crop.circle" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="N9V-Nb-Rvw"/>

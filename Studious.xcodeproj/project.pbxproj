@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04309E683368BB6F7C6F15AC /* Pods_StudiousUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D86967B77F38905A90A351B /* Pods_StudiousUITests.framework */; };
 		1E9F8B5D5F7337B579758C33 /* Pods_Studious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4093FAC2B724E0123114CBC6 /* Pods_Studious.framework */; };
+		A9B094C724071E46001C85CC /* SelfProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B094C624071E46001C85CC /* SelfProfileViewController.swift */; };
 		A9B71B5423F0BA250072848E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B71B5323F0BA250072848E /* AppDelegate.swift */; };
 		A9B71B5623F0BA250072848E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B71B5523F0BA250072848E /* SceneDelegate.swift */; };
 		A9B71B5823F0BA250072848E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B71B5723F0BA250072848E /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 		672125A639F8D952FF1A3A2B /* Pods-StudiousUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudiousUITests.release.xcconfig"; path = "Target Support Files/Pods-StudiousUITests/Pods-StudiousUITests.release.xcconfig"; sourceTree = "<group>"; };
 		73A78C030A878AE19E1CD18F /* Pods-Studious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Studious.release.xcconfig"; path = "Target Support Files/Pods-Studious/Pods-Studious.release.xcconfig"; sourceTree = "<group>"; };
 		9D86967B77F38905A90A351B /* Pods_StudiousUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudiousUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9B094C624071E46001C85CC /* SelfProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfProfileViewController.swift; sourceTree = "<group>"; };
 		A9B71B5023F0BA250072848E /* Studious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B71B5323F0BA250072848E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9B71B5523F0BA250072848E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,10 +184,11 @@
 		A9B71B8923F50E930072848E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A9B71B5723F0BA250072848E /* ViewController.swift */,
 				A9B71B8323F50E4A0072848E /* SignUpViewController.swift */,
 				A9B71B8523F50E5B0072848E /* LoginViewController.swift */,
 				A9B71B8723F50E810072848E /* HomeViewController.swift */,
-				A9B71B5723F0BA250072848E /* ViewController.swift */,
+				A9B094C624071E46001C85CC /* SelfProfileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				A9B71B5423F0BA250072848E /* AppDelegate.swift in Sources */,
 				A9B71B8423F50E4A0072848E /* SignUpViewController.swift in Sources */,
 				A9B71B8623F50E5B0072848E /* LoginViewController.swift in Sources */,
+				A9B094C724071E46001C85CC /* SelfProfileViewController.swift in Sources */,
 				A9B71B5623F0BA250072848E /* SceneDelegate.swift in Sources */,
 				A9B71B8823F50E810072848E /* HomeViewController.swift in Sources */,
 			);
