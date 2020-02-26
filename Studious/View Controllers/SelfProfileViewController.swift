@@ -10,6 +10,15 @@ import UIKit
 
 class SelfProfileViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var yourNameLabel: UILabel!
+    
+    @IBOutlet weak var yourMajorLabel: UILabel!
+    
+    @IBOutlet weak var yourClassesLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
