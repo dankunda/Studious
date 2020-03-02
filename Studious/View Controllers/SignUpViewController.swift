@@ -84,6 +84,7 @@ class SignUpViewController: UIViewController {
             let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let major = majorTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let classes = classesTextField.text!
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
@@ -99,7 +100,7 @@ class SignUpViewController: UIViewController {
                     // user was created successfully, store first name and last name
                     let db = Firestore.firestore()
                     
-                    db.collection("users").addDocument(data: ["first_name": firstName, "last_name": lastName, "major": major, "uid": result!.user.uid])
+                    db.collection("users").addDocument(data: ["first_name": firstName, "last_name": lastName, "major": major, "classes": classes, "uid": result!.user.uid])
                         
                     }
                     
