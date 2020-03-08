@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SelfProfileViewController: UIViewController {
 
@@ -18,11 +19,49 @@ class SelfProfileViewController: UIViewController {
     
     @IBOutlet weak var yourClassesLabel: UILabel!
     
+    @IBOutlet weak var yourHoursLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        func convertToDictionary(text: String) -> [String: Any]? {
+            if let data = text.data(using: .utf8) {
+                do {
+                    return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+            return nil
+        }
+        
+        let user = Auth.auth().currentUser
+        
+        if let user = user {
+            
+            let email = user.email
+            
+            let db = Firestore.firestore()
+            let docRef = db.collection("users").document(email!)
+            
+            docRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let dataDescription = document.data()
+                    
+                    self.yourNameLabel.text = (dataDescription?["first_name"] as? String)! + " " + (dataDescription?["last_name"] as? String)!
+                    self.yourMajorLabel.text = dataDescription?["major"] as? String
+                    self.yourClassesLabel.text = dataDescription?["classes"] as? String
+                    self.yourHoursLabel.text = dataDescription?["hours"] as? String
+
+                } else {
+                    print("Document does not exist")
+                    
+                }
+            }
+            
+        }
     }
     
 

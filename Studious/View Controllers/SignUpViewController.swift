@@ -24,6 +24,8 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    
     @IBOutlet weak var signUpButton: UIButton!
     
     @IBOutlet weak var errorLabel: UILabel!
@@ -53,9 +55,15 @@ class SignUpViewController: UIViewController {
         if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || majorTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             
             return "You must fill in all the required fields."
+            
+        } else if passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != confirmPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
+            
+            return "Passwords do not match"
+            
+        } else {
+            return nil
+            
         }
-        
-        return nil
     }
 
     /*
@@ -100,7 +108,7 @@ class SignUpViewController: UIViewController {
                     // user was created successfully, store first name and last name
                     let db = Firestore.firestore()
                     
-                    db.collection("users").addDocument(data: ["first_name": firstName, "last_name": lastName, "major": major, "classes": classes, "uid": result!.user.uid])
+                    db.collection("users").document(email).setData(["first_name": firstName, "last_name": lastName, "major": major, "classes": classes, "hours": 1, "uid": result!.user.uid])
                         
                     }
                     
