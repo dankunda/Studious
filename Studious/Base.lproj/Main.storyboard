@@ -38,6 +38,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="qvL-Y8-Yf0"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -48,6 +49,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmI-Xt-Hf3">
                                         <rect key="frame" x="0.0" y="60" width="334" height="40"/>
                                         <color key="backgroundColor" red="0.5" green="0.0095587984601702702" blue="0.0048776942464133222" alpha="0.74534460619999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -61,8 +63,8 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdS-k7-rGQ">
-                                <rect key="frame" x="48" y="374.5" width="318.5" height="55"/>
-                                <string key="text">"The only one-to-one, time-banking
+                                <rect key="frame" x="50.5" y="374.5" width="313" height="55"/>
+                                <string key="text">"The only one-to-one time-banking
 tutoring service run by students
 that ensures academic success."</string>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="18"/>
@@ -100,8 +102,29 @@ that ensures academic success."</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5zt-Te-9uf">
-                                <rect key="frame" x="40" y="40" width="334" height="168"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSg-Mt-cxA">
+                                <rect key="frame" x="40" y="20" width="80" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="1Tk-Dm-7Qg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="rCd-7X-oGH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
+                                <state key="normal" title="&lt; Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Y6s-EF-puo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEo-XS-Kqv">
+                                <rect key="frame" x="40" y="92.5" width="80.5" height="37.5"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5zt-Te-9uf">
+                                <rect key="frame" x="40" y="150" width="334" height="183"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DA4-yR-mSh">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
@@ -109,16 +132,17 @@ that ensures academic success."</string>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EMz-o6-0ni">
-                                        <rect key="frame" x="0.0" y="50" width="334" height="40"/>
+                                        <rect key="frame" x="0.0" y="55" width="334" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3Z-ZG-yuK">
-                                        <rect key="frame" x="0.0" y="100" width="334" height="40"/>
+                                        <rect key="frame" x="0.0" y="110" width="334" height="40"/>
                                         <color key="backgroundColor" red="0.5" green="0.0095587984601702702" blue="0.0048776942464133222" alpha="0.74534460619999998" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="9zg-U3-Wax"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="16"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -127,7 +151,7 @@ that ensures academic success."</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rw2-V1-rkj">
-                                        <rect key="frame" x="0.0" y="150" width="334" height="18"/>
+                                        <rect key="frame" x="0.0" y="165" width="334" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -138,29 +162,18 @@ that ensures academic success."</string>
                                     <constraint firstItem="u3Z-ZG-yuK" firstAttribute="height" secondItem="DA4-yR-mSh" secondAttribute="height" id="sLs-BL-SBJ"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSg-Mt-cxA">
-                                <rect key="frame" x="137" y="573" width="140" height="35"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="Jj5-cl-EBG"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="zfX-XX-dzL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Go Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="Y6s-EF-puo"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.55976554339999995" green="0.8012284838" blue="0.91646177029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="wSg-Mt-cxA" firstAttribute="centerX" secondItem="Ida-fo-prs" secondAttribute="centerX" id="Fge-Tg-dwV"/>
+                            <constraint firstItem="wSg-Mt-cxA" firstAttribute="top" secondItem="GUy-vr-rSh" secondAttribute="top" constant="20" id="20E-AZ-Sbo"/>
                             <constraint firstItem="GUy-vr-rSh" firstAttribute="trailing" secondItem="5zt-Te-9uf" secondAttribute="trailing" constant="40" id="IQ1-jN-y4g"/>
                             <constraint firstItem="5zt-Te-9uf" firstAttribute="leading" secondItem="GUy-vr-rSh" secondAttribute="leading" constant="40" id="Lw5-p7-gH1"/>
-                            <constraint firstItem="5zt-Te-9uf" firstAttribute="top" secondItem="GUy-vr-rSh" secondAttribute="top" constant="40" id="Y4p-Ur-1Zo"/>
-                            <constraint firstItem="GUy-vr-rSh" firstAttribute="bottom" secondItem="wSg-Mt-cxA" secondAttribute="bottom" constant="200" id="sqk-29-p0y"/>
+                            <constraint firstItem="wSg-Mt-cxA" firstAttribute="leading" secondItem="GUy-vr-rSh" secondAttribute="leading" constant="40" id="THm-pA-FwR"/>
+                            <constraint firstItem="GUy-vr-rSh" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wSg-Mt-cxA" secondAttribute="trailing" symbolic="YES" id="Utp-1y-L7N"/>
+                            <constraint firstItem="5zt-Te-9uf" firstAttribute="top" secondItem="GUy-vr-rSh" secondAttribute="top" constant="150" id="bO7-gr-lKy"/>
+                            <constraint firstItem="5zt-Te-9uf" firstAttribute="top" secondItem="gEo-XS-Kqv" secondAttribute="bottom" constant="20" id="d5m-ds-Yy2"/>
+                            <constraint firstItem="GUy-vr-rSh" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gEo-XS-Kqv" secondAttribute="trailing" symbolic="YES" id="iym-8E-RMb"/>
+                            <constraint firstItem="gEo-XS-Kqv" firstAttribute="leading" secondItem="GUy-vr-rSh" secondAttribute="leading" constant="40" id="ysV-vJ-mod"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GUy-vr-rSh"/>
                     </view>
@@ -175,7 +188,7 @@ that ensures academic success."</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Hl-IW-KoU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1935" y="511"/>
+            <point key="canvasLocation" x="1934.7826086956522" y="510.9375"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="qt6-5C-EC1">
@@ -185,8 +198,29 @@ that ensures academic success."</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VPK-hL-jTo">
-                                <rect key="frame" x="40" y="40" width="334" height="400"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nz9-OH-Vn6">
+                                <rect key="frame" x="40" y="20" width="80" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="XPR-7O-4vF"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="XY4-LE-Kx7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
+                                <state key="normal" title="&lt; Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="N9V-Nb-Rvw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDj-AZ-RSf">
+                                <rect key="frame" x="40" y="92.5" width="112" height="37.5"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="VPK-hL-jTo">
+                                <rect key="frame" x="40" y="150" width="334" height="440"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HVY-A4-h55">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
@@ -194,41 +228,42 @@ that ensures academic success."</string>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="78X-wy-FiM">
-                                        <rect key="frame" x="0.0" y="50" width="334" height="40"/>
+                                        <rect key="frame" x="0.0" y="55" width="334" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Major" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cf4-0Q-ug7">
-                                        <rect key="frame" x="0.0" y="100" width="334" height="34"/>
+                                        <rect key="frame" x="0.0" y="110" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your strongest classes (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pwi-8y-rST">
-                                        <rect key="frame" x="0.0" y="144" width="334" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Strongest Classes (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pwi-8y-rST">
+                                        <rect key="frame" x="0.0" y="159" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7oX-sB-mQC">
-                                        <rect key="frame" x="0.0" y="188" width="334" height="40"/>
+                                        <rect key="frame" x="0.0" y="208" width="334" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzL-Zt-HI4">
-                                        <rect key="frame" x="0.0" y="238" width="334" height="40"/>
+                                        <rect key="frame" x="0.0" y="263" width="334" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QFR-h4-zD7">
-                                        <rect key="frame" x="0.0" y="288" width="334" height="34"/>
+                                        <rect key="frame" x="0.0" y="318" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhF-PG-g1n">
-                                        <rect key="frame" x="0.0" y="332" width="334" height="40"/>
+                                        <rect key="frame" x="0.0" y="367" width="334" height="40"/>
                                         <color key="backgroundColor" red="0.5" green="0.0095587984601702702" blue="0.0048776942464133222" alpha="0.74534460619999998" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="nh6-yy-8Fa"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="16"/>
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -237,7 +272,7 @@ that ensures academic success."</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ou2-Ec-uoC">
-                                        <rect key="frame" x="0.0" y="382" width="334" height="18"/>
+                                        <rect key="frame" x="0.0" y="422" width="334" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -250,29 +285,18 @@ that ensures academic success."</string>
                                     <constraint firstItem="bzL-Zt-HI4" firstAttribute="height" secondItem="HVY-A4-h55" secondAttribute="height" id="tMY-6i-cMs"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nz9-OH-Vn6">
-                                <rect key="frame" x="137" y="573" width="140" height="35"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="56Q-fv-7dI"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="eWS-2T-WKB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Go Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="N9V-Nb-Rvw"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.55976554339999995" green="0.8012284838" blue="0.91646177029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="RBI-Ug-YfL" firstAttribute="bottom" secondItem="nz9-OH-Vn6" secondAttribute="bottom" constant="200" id="Cof-X2-QvH"/>
-                            <constraint firstItem="nz9-OH-Vn6" firstAttribute="centerX" secondItem="bjq-GO-ahk" secondAttribute="centerX" id="FMh-Fr-tyx"/>
+                            <constraint firstItem="DDj-AZ-RSf" firstAttribute="leading" secondItem="RBI-Ug-YfL" secondAttribute="leading" constant="40" id="6fV-Mb-Gi8"/>
+                            <constraint firstItem="nz9-OH-Vn6" firstAttribute="top" secondItem="RBI-Ug-YfL" secondAttribute="top" constant="20" id="7aT-2D-gRA"/>
+                            <constraint firstItem="nz9-OH-Vn6" firstAttribute="leading" secondItem="RBI-Ug-YfL" secondAttribute="leading" constant="40" id="N4y-b9-VFz"/>
+                            <constraint firstItem="VPK-hL-jTo" firstAttribute="top" secondItem="DDj-AZ-RSf" secondAttribute="bottom" constant="20" id="UJv-rV-UkZ"/>
+                            <constraint firstItem="RBI-Ug-YfL" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nz9-OH-Vn6" secondAttribute="trailing" symbolic="YES" id="XS1-g2-dy3"/>
                             <constraint firstItem="RBI-Ug-YfL" firstAttribute="trailing" secondItem="VPK-hL-jTo" secondAttribute="trailing" constant="40" id="mjv-4J-RGC"/>
                             <constraint firstItem="VPK-hL-jTo" firstAttribute="leading" secondItem="RBI-Ug-YfL" secondAttribute="leading" constant="40" id="nAW-vt-IS4"/>
-                            <constraint firstItem="VPK-hL-jTo" firstAttribute="top" secondItem="RBI-Ug-YfL" secondAttribute="top" constant="40" id="uFo-jM-qjU"/>
+                            <constraint firstItem="VPK-hL-jTo" firstAttribute="top" secondItem="RBI-Ug-YfL" secondAttribute="top" constant="150" id="vZ1-ax-PWv"/>
+                            <constraint firstItem="RBI-Ug-YfL" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DDj-AZ-RSf" secondAttribute="trailing" symbolic="YES" id="xsW-gi-3Oe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RBI-Ug-YfL"/>
                     </view>
@@ -309,30 +333,24 @@ that ensures academic success."</string>
                                     <constraint firstAttribute="width" constant="50" id="qz0-63-c1a"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6SC-OR-Wh4">
-                                <rect key="frame" x="20" y="124" width="374" height="537"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="537" id="Nnb-KM-aCX"/>
-                                </constraints>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U6P-o3-XEt">
-                                <rect key="frame" x="35" y="716.5" width="300" height="120.5"/>
+                                <rect key="frame" x="35" y="719.5" width="300" height="117.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBC-7Z-Fwx">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="33.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="32.5"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eg8-Xx-mZ1">
-                                        <rect key="frame" x="0.0" y="43.5" width="300" height="33.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <rect key="frame" x="0.0" y="42.5" width="300" height="32.5"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strongest Classes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdV-XI-H4I">
-                                        <rect key="frame" x="0.0" y="87" width="300" height="33.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <rect key="frame" x="0.0" y="85" width="300" height="32.5"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -343,13 +361,22 @@ that ensures academic success."</string>
                                     <constraint firstAttribute="width" constant="300" id="WRW-dR-E2b"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Viz-Kh-ren">
+                                <rect key="frame" x="28" y="64" width="37" height="31.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="SVF-Ba-xLY"/>
+                                    <constraint firstAttribute="height" constant="34" id="Sla-bA-aJx"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="archivebox" catalog="system"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaS-FS-QVH">
                                 <rect key="frame" x="351" y="61.5" width="35" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="8rs-N1-yze"/>
                                     <constraint firstAttribute="width" constant="35" id="96d-Om-xgl"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="person.crop.circle" catalog="system"/>
                                 <connections>
                                     <segue destination="XKR-q4-Wei" kind="show" id="Goo-pk-T2D"/>
@@ -362,17 +389,17 @@ that ensures academic success."</string>
                             <constraint firstItem="U6P-o3-XEt" firstAttribute="leading" secondItem="8t4-h3-pJr" secondAttribute="leading" constant="35" id="4aF-Qu-Gvg"/>
                             <constraint firstItem="oog-aM-UBC" firstAttribute="centerX" secondItem="Hym-5l-Qnp" secondAttribute="centerX" id="FXc-H8-lWR"/>
                             <constraint firstItem="8t4-h3-pJr" firstAttribute="bottom" secondItem="U6P-o3-XEt" secondAttribute="bottom" constant="25" id="Mqh-Gv-2XU"/>
-                            <constraint firstItem="6SC-OR-Wh4" firstAttribute="leading" secondItem="Hym-5l-Qnp" secondAttribute="leadingMargin" id="UVU-AJ-oWG"/>
-                            <constraint firstItem="6SC-OR-Wh4" firstAttribute="top" secondItem="oog-aM-UBC" secondAttribute="bottom" constant="20" id="g9b-94-dww"/>
                             <constraint firstItem="8t4-h3-pJr" firstAttribute="trailing" secondItem="PaS-FS-QVH" secondAttribute="trailing" constant="28" id="iHZ-lC-nZU"/>
-                            <constraint firstItem="6SC-OR-Wh4" firstAttribute="centerX" secondItem="Hym-5l-Qnp" secondAttribute="centerX" id="lc0-9t-KCk"/>
+                            <constraint firstItem="Viz-Kh-ren" firstAttribute="top" secondItem="8t4-h3-pJr" secondAttribute="top" constant="19" id="jpo-Hv-lcj"/>
+                            <constraint firstItem="Viz-Kh-ren" firstAttribute="leading" secondItem="8t4-h3-pJr" secondAttribute="leading" constant="28" id="mNF-W0-ipq"/>
                             <constraint firstItem="oog-aM-UBC" firstAttribute="top" secondItem="8t4-h3-pJr" secondAttribute="top" constant="10" id="skU-YT-OUJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8t4-h3-pJr"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RZw-wp-M7r"/>
                     <connections>
                         <outlet property="classesLabel" destination="SdV-XI-H4I" id="iNe-4j-bxJ"/>
-                        <outlet property="imageView" destination="6SC-OR-Wh4" id="LBy-Ii-OuH"/>
+                        <outlet property="filterButton" destination="Viz-Kh-ren" id="2rj-8K-sdF"/>
                         <outlet property="majorLabel" destination="eg8-Xx-mZ1" id="h8F-pt-NI6"/>
                         <outlet property="nameLabel" destination="dBC-7Z-Fwx" id="iba-oJ-fqe"/>
                         <outlet property="profileButton" destination="PaS-FS-QVH" id="wUW-RR-i5y"/>
@@ -390,67 +417,83 @@ that ensures academic success."</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-open-book-96-2" translatesAutoresizingMaskIntoConstraints="NO" id="5pN-SI-fHn">
+                                <rect key="frame" x="182" y="10" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="E0A-Ac-eTx"/>
+                                    <constraint firstAttribute="width" constant="50" id="wxw-Hs-ExI"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSe-qt-BDq">
-                                <rect key="frame" x="30" y="45" width="117.5" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <rect key="frame" x="127" y="75" width="160" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZjJ-rr-P6F"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="khS-v1-6ak"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3q2-7g-iet">
-                                <rect key="frame" x="30" y="109" width="187" height="268.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="268.5" id="1IP-BI-VE1"/>
-                                    <constraint firstAttribute="width" constant="187" id="MSg-HD-7Qf"/>
-                                </constraints>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vbY-sg-nbB">
-                                <rect key="frame" x="30" y="397.5" width="300" height="252"/>
+                                <rect key="frame" x="30" y="165" width="300" height="322.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLN-a2-7lC">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="25"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yourName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BR-ar-X2h">
-                                        <rect key="frame" x="0.0" y="34" width="300" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <rect key="frame" x="0.0" y="35" width="300" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pr3-lg-fj6">
+                                        <rect key="frame" x="0.0" y="66.5" width="300" height="25"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yourEmail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etc-6d-Xsp">
+                                        <rect key="frame" x="0.0" y="101.5" width="300" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gi-HL-H0z">
-                                        <rect key="frame" x="0.0" y="65.5" width="300" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="0.0" y="133" width="300" height="25"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yourMajor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASZ-Ic-kyd">
-                                        <rect key="frame" x="0.0" y="99.5" width="300" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <rect key="frame" x="0.0" y="168" width="300" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Strongest Classes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eon-Cf-r42">
-                                        <rect key="frame" x="0.0" y="131" width="300" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="0.0" y="199.5" width="300" height="25"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yourClasses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9z-33-hsx">
-                                        <rect key="frame" x="0.0" y="165" width="300" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <rect key="frame" x="0.0" y="234.5" width="300" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muI-FW-xVH">
-                                        <rect key="frame" x="0.0" y="196.5" width="300" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="0.0" y="266" width="300" height="25"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yourHours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTe-na-Fs5">
-                                        <rect key="frame" x="0.0" y="230.5" width="300" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <rect key="frame" x="0.0" y="301" width="300" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -465,20 +508,20 @@ that ensures academic success."</string>
                         </subviews>
                         <color key="backgroundColor" red="0.55976554339999995" green="0.8012284838" blue="0.91646177029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="AnV-bE-EnJ" firstAttribute="trailing" secondItem="FSe-qt-BDq" secondAttribute="trailing" constant="266.5" id="1MZ-20-wBy"/>
-                            <constraint firstItem="FSe-qt-BDq" firstAttribute="top" secondItem="AnV-bE-EnJ" secondAttribute="top" constant="45" id="1qL-SC-2zX"/>
-                            <constraint firstItem="FSe-qt-BDq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AnV-bE-EnJ" secondAttribute="leading" id="GFI-kW-4zw"/>
-                            <constraint firstItem="3q2-7g-iet" firstAttribute="top" secondItem="FSe-qt-BDq" secondAttribute="bottom" constant="35" id="Hiu-MS-f5n"/>
-                            <constraint firstItem="3q2-7g-iet" firstAttribute="leading" secondItem="AnV-bE-EnJ" secondAttribute="leading" constant="30" id="QuG-IU-WZY"/>
+                            <constraint firstItem="FSe-qt-BDq" firstAttribute="top" secondItem="5pN-SI-fHn" secondAttribute="bottom" constant="15" id="Auc-6Y-D8t"/>
+                            <constraint firstItem="FSe-qt-BDq" firstAttribute="centerX" secondItem="6Sb-SQ-YV5" secondAttribute="centerX" id="MqG-lJ-CxZ"/>
                             <constraint firstItem="vbY-sg-nbB" firstAttribute="leading" secondItem="AnV-bE-EnJ" secondAttribute="leading" constant="30" id="Rfg-mU-TuU"/>
-                            <constraint firstItem="vbY-sg-nbB" firstAttribute="top" secondItem="3q2-7g-iet" secondAttribute="bottom" constant="20" id="Sce-Dl-rwl"/>
+                            <constraint firstItem="vbY-sg-nbB" firstAttribute="top" secondItem="FSe-qt-BDq" secondAttribute="bottom" constant="50" id="jrc-IJ-dOw"/>
+                            <constraint firstItem="5pN-SI-fHn" firstAttribute="centerX" secondItem="6Sb-SQ-YV5" secondAttribute="centerX" id="oio-ov-Lc2"/>
+                            <constraint firstItem="AnV-bE-EnJ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FSe-qt-BDq" secondAttribute="trailing" symbolic="YES" id="phd-IN-v47"/>
+                            <constraint firstItem="5pN-SI-fHn" firstAttribute="top" secondItem="AnV-bE-EnJ" secondAttribute="top" constant="10" id="yK9-f0-pLe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AnV-bE-EnJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="cvo-GN-fxo"/>
                     <connections>
-                        <outlet property="imageView" destination="3q2-7g-iet" id="rxd-9h-Z8i"/>
                         <outlet property="yourClassesLabel" destination="a9z-33-hsx" id="wBU-0W-8PJ"/>
+                        <outlet property="yourEmailLabel" destination="etc-6d-Xsp" id="IhD-Q6-tux"/>
                         <outlet property="yourHoursLabel" destination="VTe-na-Fs5" id="gzz-G3-4LR"/>
                         <outlet property="yourMajorLabel" destination="ASZ-Ic-kyd" id="uZe-i0-ODJ"/>
                         <outlet property="yourNameLabel" destination="0BR-ar-X2h" id="4pX-Uu-7SK"/>
@@ -507,10 +550,11 @@ that ensures academic success."</string>
         </scene>
     </scenes>
     <resources>
+        <image name="archivebox" catalog="system" width="64" height="52"/>
         <image name="icons8-open-book-96-2" width="96" height="96"/>
         <image name="person.crop.circle" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="N9V-Nb-Rvw"/>
+        <segue reference="Y6s-EF-puo"/>
     </inferredMetricsTieBreakers>
 </document>

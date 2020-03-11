@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.signUpButton.layer.cornerRadius = 8
+        self.loginButton.layer.cornerRadius = 8
 
     }
 

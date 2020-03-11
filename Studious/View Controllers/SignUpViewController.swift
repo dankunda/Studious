@@ -37,6 +37,8 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.goBackButton.layer.cornerRadius = 16
+        self.signUpButton.layer.cornerRadius = 8
         setUpElements()
         
     }
@@ -54,7 +56,7 @@ class SignUpViewController: UIViewController {
         
         if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || majorTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             
-            return "You must fill in all the required fields."
+            return "Please fill in all required fields."
             
         } else if passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != confirmPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
             

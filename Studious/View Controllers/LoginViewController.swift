@@ -26,6 +26,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.goBackButton.layer.cornerRadius = 16
+        self.loginButton.layer.cornerRadius = 8
         setUpElements()
         
     }
@@ -40,7 +42,7 @@ class LoginViewController: UIViewController {
         
         if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             
-            return "You must fill in all the required fields."
+            return "Please fill in all required fields."
         }
         
         return nil
@@ -77,7 +79,7 @@ class LoginViewController: UIViewController {
                 
                 if err != nil {
                     // couldn't sign in
-                    self.showError("Error signing in, double check your credentials")
+                    self.showError("Error, double check your credentials")
                 }
                 else {
                     // transition to home screen/view

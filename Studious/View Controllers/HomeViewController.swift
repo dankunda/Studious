@@ -10,9 +10,9 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var profileButton: UIButton!
+    @IBOutlet weak var filterButton: UIButton!
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var profileButton: UIButton!
     
     @IBOutlet weak var nameLabel: UILabel!
     
