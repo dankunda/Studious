@@ -9,12 +9,6 @@
 import UIKit
 import Firebase
 
-extension String {
-    subscript(i: Int) -> String {
-        return String(self[index(startIndex, offsetBy: i)])
-    }
-}
-
 class SelfProfileViewController: UIViewController {
     
     @IBOutlet weak var yourNameLabel: UILabel!
@@ -62,8 +56,8 @@ class SelfProfileViewController: UIViewController {
                     self.yourEmailLabel.text = email
                     self.yourMajorLabel.text = dataDescription?["major"] as? String
                     self.yourClassesLabel.text = dataDescription?["classes"] as? String
-                    let strToFix = String(describing: dataDescription?["hours"])
-                    self.yourHoursLabel.text = strToFix[9]
+                    let hoursHolder = dataDescription?["hours"] as? NSNumber
+                    self.yourHoursLabel.text = hoursHolder?.stringValue
                 } else {
                     print("Document does not exist")
                     

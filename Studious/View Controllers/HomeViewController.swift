@@ -8,8 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseCore
-import FirebaseFirestore
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -17,76 +15,95 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var userTableView: UITableView!
     
-    var usersArray = [String]()
-    var db: Firestore!
-    var users = ["tcook@icloud.com", "jdoe@syr.edu", "dan.am@aol.com"]
+    var fNamesArray = [String]()
+    var lNamesArray = [String]()
+    var majorsArray = [String]()
+    var classesArray = [String]()
+    var hoursArray = [NSNumber]()
+    var emailsArray = [String]()
+    
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+
         userTableView.delegate = self
         userTableView.dataSource = self
-        userTableView.register(UserCell.self,forCellReuseIdentifier:"userCell")
         // Do any additional setup after loading the view.
-        db = Firestore.firestore()
-//        loadData()
         
-        for user in users {
-            self.usersArray.append(user)
-        }
+        loadData()
         
     }
     
     
     func loadData() {
+        
+        let db = Firestore.firestore()
+        
         db.collection("users").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
+
+                    self.fNamesArray.append((document.data()["first_name"] as? String ?? "None"))
+                    self.lNamesArray.append((document.data()["last_name"] as? String ?? "None"))
+                    self.majorsArray.append((document.data()["major"] as? String ?? "None"))
+                    self.classesArray.append((document.data()["classes"] as? String ?? "None"))
+                    let hoursHolder = document.data()["hours"] as? NSNumber
+                    self.hoursArray.append(hoursHolder ?? 0)
+                    self.emailsArray.append(document.documentID)
                     
-                    print("Here's all the document ID's: \(document.documentID)")
-
-                    self.usersArray.append(document.documentID)
                 }
+                
             }
-            print(self.usersArray)
-
+            self.userTableView.reloadData()
         }
-        self.userTableView.reloadData()
-    }
-    
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 1
     }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 99
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        print("Tableview setup \(usersArray.count)")
-        return usersArray.count
+        return emailsArray.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = userTableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! UserCell
-        let user1 = usersArray[indexPath.row]
 
-        cell.fullNameLabel.text = user1
-        print("Array is populated \(usersArray)")
+        let fname = fNamesArray[indexPath.row]
+        let lname = lNamesArray[indexPath.row]
+        let major = majorsArray[indexPath.row]
+
+        cell.nameLabel.text = fname + " " + lname
+        cell.majorLabel.text = "\(major) Student"
 
         return cell
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailViewController
+        
+        vc?.fname = fNamesArray[indexPath.row]
+        vc?.lname = lNamesArray[indexPath.row]
+        vc?.major = majorsArray[indexPath.row]
+        vc?.classes = classesArray[indexPath.row]
+        vc?.hours = hoursArray[indexPath.row]
+        vc?.email = emailsArray[indexPath.row]
+        
+        view.window?.rootViewController = vc
+        view.window?.makeKeyAndVisible()
     }
-    */
+    
+
+
 
 }
