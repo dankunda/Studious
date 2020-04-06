@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
 
@@ -20,6 +21,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.signUpButton.layer.cornerRadius = 8
         self.loginButton.layer.cornerRadius = 8
+    
 
     }
 

@@ -49,7 +49,7 @@ class DetailViewController: UIViewController, MFMailComposeViewControllerDelegat
         studentsProfileLabel.text = "\(fname)'s Profile"
         nameLabel.text = fname + " " + lname
         majorsInLabel.text = "Majors in \(major)"
-        strongestClassesLabel.text = "Strongest Classes are \(classes)"
+        strongestClassesLabel.text = "Strongest Class(es) are \(classes)"
         hoursLabel.text = "Hours: \(hours)"
         emailLabel.text = email
         emailToTutorButton.setTitle("Request to tutor \(fname)", for: .normal)
